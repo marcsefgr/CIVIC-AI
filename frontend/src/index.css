@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #ffffff;
+  --color-foreground: #0F172A;
+  --color-card: #ffffff;
+  --color-card-foreground: #0F172A;
+  --color-primary: #2357C3;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #F1F5F9;
+  --color-secondary-foreground: #334155;
+  --color-muted: #F8FAFC;
+  --color-muted-foreground: #64748B;
+  --color-accent: #2357C3;
+  --color-accent-foreground: #ffffff;
+  --color-border: #E2E8F0;
+  --color-ring: #2357C3;
+  --radius: 12px;
+
+  /* status */
+  --color-status-submitted: #94A3B8;
+  --color-status-review: #F59E0B;
+  --color-status-progress: #3B82F6;
+  --color-status-resolved: #10B981;
+  --color-status-rejected: #EF4444;
+
+  /* AI suggestion surface */
+  --color-ai-surface: #EEF2FF;
+  --color-ai-border: #C7D2FE;
+  --color-ai-text: #4338CA;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #F1F5F9;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keep scrollable notices and long descriptions visibly scrollable. */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }
+* { scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent; }
+input, textarea { caret-color: currentColor; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+button:focus-visible, a:focus-visible, select:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 2px;
+}

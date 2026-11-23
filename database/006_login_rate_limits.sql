@@ -1,0 +1,10 @@
+USE civicai_app;
+
+CREATE TABLE IF NOT EXISTS login_attempts (
+  bucket_key CHAR(64) NOT NULL PRIMARY KEY,
+  window_started DATETIME NOT NULL,
+  failed_attempts SMALLINT UNSIGNED NOT NULL DEFAULT 0,
+  blocked_until DATETIME NULL,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX (blocked_until)
+) ENGINE=InnoDB;

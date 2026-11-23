@@ -1,0 +1,32 @@
+﻿test_id,photo_file,photo_folder,description,location,expected_category,expected_priority_hint,expected_consistency,people_visible,notes
+T01,pothole_01.jpg,valid,"Large pothole filled with water on the main road, hard to see at night.","Purok 3, Sample Barangay",Infrastructure,High,match,,
+T02,pothole_02.jpg,valid,"Several potholes along the barangay road, motorcycles keep swerving around them.","Purok 3, Sample Barangay",Infrastructure,Medium,match,,
+T03,pothole_03.jpg,valid,Road surface is breaking into loose gravel and holes near the school.,"Purok 3, Sample Barangay",Infrastructure,Medium,match,,
+T04,pothole_04.jpg,valid,"Deep pothole at the corner, full of rainwater.","Purok 3, Sample Barangay",Infrastructure,Medium,match,,
+T05,roadcrack_01.jpg,valid,Long crack splitting the concrete road beside the fence.,"Purok 3, Sample Barangay",Infrastructure,High,match,,
+T06,roadcrack_02.jpg,valid,Concrete road cracked and broken apart in the middle of the lane.,"Purok 3, Sample Barangay",Infrastructure,High,match,"yes (small, distant)",
+T07,roadcrack_03.jpg,valid,"Road edge has collapsed with deep cracks, the ground is sinking.","Purok 3, Sample Barangay",Infrastructure,High,match,yes (bystanders),
+T08,roadcrack_04.jpg,valid,Road cracked open and lifted; someone put a chair there as a warning.,"Purok 3, Sample Barangay",Infrastructure,High,match,,
+T09,roadcrack_05.jpg,valid,Road cracked and uplifted after the earthquake.,"Purok 3, Sample Barangay",Infrastructure,High,match,,Has an official-looking seal in a corner.
+T10,quake_building_01.jpg,valid,"Storefront wall collapsed onto the road, debris is blocking the lane.","Purok 3, Sample Barangay",Public Safety,Urgent,match,"yes (small, distant)",Ambiguous: Infrastructure vs Public Safety. Decide your ground truth.
+T11,garbage_01.jpg,valid,Trash piled up in the road gutter and blocking the drain.,"Purok 3, Sample Barangay",Sanitation,Medium,match,,
+T12,garbage_02.jpg,valid,Uncollected garbage heaped beside the wall near the truck parking.,"Purok 3, Sample Barangay",Sanitation,Medium,match,,
+T13,garbage_03.jpg,valid,"Garbage sacks and bins overflowing, not collected for days.","Purok 3, Sample Barangay",Sanitation,Medium,match,,
+T14,garbage_04.jpg,valid,"Garbage dumped in the vacant lot, with a bad smell.","Purok 3, Sample Barangay",Sanitation,Medium,match,,Ambiguous: Sanitation vs Environment.
+T15,garbage_05_mrf.jpg,valid,The waste storage cage is full and sacks are spilling over.,"Purok 3, Sample Barangay",Sanitation,Low,match,,
+T16,powerline_01.jpg,valid,"Leaning pole with tangled wires over the road, people pass right beneath.","Purok 3, Sample Barangay",Public Safety,High,match,yes (bystanders),Ambiguous: Public Safety vs Infrastructure.
+T17,powerline_02.jpg,valid,"Electric pole fell across the road, cables lying on the pavement.","Purok 3, Sample Barangay",Public Safety,Urgent,match,,
+T18,powerline_03.jpg,valid,"Pole fallen onto the road after the storm, tricycles must go around.","Purok 3, Sample Barangay",Public Safety,Urgent,match,"yes (small, distant)",
+T19,powerline_04.jpg,valid,Many poles and wires are down in the street after the typhoon.,"Purok 3, Sample Barangay",Public Safety,Urgent,match,,
+T20,meme_01.jpg,mismatch,Big pothole in front of the school gate.,"Purok 3, Sample Barangay",,,mismatch,,Meme/non-issue photo with an issue description. Expect needs_verification=1.
+T21,meme_02.jpg,mismatch,Garbage has not been collected for a week.,"Purok 3, Sample Barangay",,,mismatch,,Meme/non-issue photo with an issue description. Expect needs_verification=1.
+T22,meme_03.jpg,mismatch,"Broken streetlight on the main road, the whole area is dark.","Purok 3, Sample Barangay",,,mismatch,,Meme/non-issue photo with an issue description. Expect needs_verification=1.
+T23,meme_04.jpg,mismatch,Drainage is clogged and the street floods when it rains.,"Purok 3, Sample Barangay",,,mismatch,,Meme/non-issue photo with an issue description. Expect needs_verification=1.
+T24,meme_05.jpg,mismatch,Cracked road near the barangay hall.,"Purok 3, Sample Barangay",,,mismatch,,Meme/non-issue photo with an issue description. Expect needs_verification=1.
+T25,meme_06.jpg,mismatch,Fallen electric pole blocking the road.,"Purok 3, Sample Barangay",,,mismatch,,Meme/non-issue photo with an issue description. Expect needs_verification=1.
+T26,tricky_01_pothole_joke.png,tricky,Pothole by the roadside near my house.,"Purok 3, Sample Barangay",Infrastructure,Medium,unclear/partial,,Staged joke photo (skeleton and sign in a real pothole). Decide what you expect.
+T27,tricky_02_wires_silhouette.jpg,tricky,Loose wires hanging above the street near the lamp post.,"Purok 3, Sample Barangay",Public Safety,Medium,unclear/partial,,Silhouette of a person on the wires; looks edited. Decide what you expect.
+T28,pothole_01.jpg,valid,Garbage has not been collected for a week.,"Purok 3, Sample Barangay",,,mismatch,,"Real issue photo, WRONG description (the reverse mismatch)."
+T29,garbage_03.jpg,valid,Fallen electric pole is blocking the road.,"Purok 3, Sample Barangay",,,mismatch,,"Real issue photo, WRONG description (the reverse mismatch)."
+T30,powerline_02.jpg,valid,"Large pothole on the road, motorcycles keep falling.","Purok 3, Sample Barangay",,,mismatch,,"Real issue photo, WRONG description (the reverse mismatch)."
+T31,roadcrack_01.jpg,valid,"Broken streetlight, the area is very dark at night.","Purok 3, Sample Barangay",,,mismatch,,"Real issue photo, WRONG description (the reverse mismatch)."

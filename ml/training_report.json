@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "name": "CivicAI photo issue classifier",
+    "model_type": "HOG features + logistic regression",
+    "image_size": 64,
+    "orientations": 9,
+    "pixels_per_cell": 8,
+    "cells_per_block": 2,
+    "classes": [
+      "Infrastructure",
+      "Sanitation"
+    ],
+    "trained_on": [
+      "Programmer-RD-AI/road-issues-detection-dataset",
+      "TACO (Trash Annotations in Context)"
+    ],
+    "dataset_doi": "10.57967/hf/6188",
+    "dataset_licenses": {
+      "road_issues_detection_dataset": "CC0-1.0 as declared by its Hugging Face card; upstream source terms may also apply",
+      "taco": "CC BY 4.0 as stated by the CivicAI dataset kit; verify image-level terms before redistribution"
+    },
+    "dataset_citations": [
+      "Disansa et al. (2025), Road Issues Detection Dataset, DOI: 10.57967/hf/6188",
+      "Proen\u00e7a and Sim\u00f5es (2020), TACO: Trash Annotations in Context"
+    ],
+    "generated_on": "2026-10-26",
+    "confidence_margin_threshold": 0.15,
+    "source_labels_mapped": {
+      "Littering Garbage on Public Places Issues": "Sanitation",
+      "Broken Road Sign Issues": "Infrastructure",
+      "Damaged Road issues": "Infrastructure"
+    },
+    "confidence_threshold": 0.6,
+    "holdout_accuracy": 0.8903846153846153,
+    "holdout_balanced_accuracy": 0.8934636430051737,
+    "limitations": [
+      "Photo-only classifier; it does not read descriptions or set priority/status.",
+      "Infrastructure examples cover damaged roads and broken signs; Sanitation examples cover littering and waste.",
+      "A low-confidence output is shown as uncertain; staff must make the final decision.",
+      "Dataset images come from multiple sources and locations; local barangay accuracy may differ."
+    ]
+  },
+  "dataset_images_after_deduplication": 4921,
+  "images_by_category": {
+    "Infrastructure": 2470,
+    "Sanitation": 2451
+  },
+  "skipped_images": [],
+  "split": {
+    "train": 3881,
+    "holdout": 1040,
+    "grouped_by_source_filename": true
+  },
+  "holdout_accuracy": 0.8903846153846153,
+  "holdout_balanced_accuracy": 0.8934636430051737,
+  "holdout_per_class": {
+    "Infrastructure": {
+      "precision": 0.9346153846153846,
+      "recall": 0.8586572438162544,
+      "f1-score": 0.8950276243093923,
+      "support": 566.0
+    },
+    "Sanitation": {
+      "precision": 0.8461538461538461,
+      "recall": 0.9282700421940928,
+      "f1-score": 0.8853118712273642,
+      "support": 474.0
+    },
+    "accuracy": 0.8903846153846153,
+    "macro avg": {
+      "precision": 0.8903846153846153,
+      "recall": 0.8934636430051737,
+      "f1-score": 0.8901697477683783,
+      "support": 1040.0
+    },
+    "weighted avg": {
+      "precision": 0.8942973372781066,
+      "recall": 0.8903846153846153,
+      "f1-score": 0.8905994830008526,
+      "support": 1040.0
+    }
+  },
+  "holdout_confusion_matrix": {
+    "labels": [
+      "Infrastructure",
+      "Sanitation"
+    ],
+    "values": [
+      [
+        486,
+        80
+      ],
+      [
+        34,
+        440
+      ]
+    ]
+  },
+  "confidence_coverage": {
+    "0.5": {
+      "accepted": 1002,
+      "coverage": 0.9634615384615385,
+      "accuracy": 0.9031936127744511
+    },
+    "0.6": {
+      "accepted": 991,
+      "coverage": 0.9528846153846153,
+      "accuracy": 0.9041372351160444
+    },
+    "0.7": {
+      "accepted": 931,
+      "coverage": 0.8951923076923077,
+      "accuracy": 0.9172932330827067
+    },
+    "0.8": {
+      "accepted": 868,
+      "coverage": 0.8346153846153846,
+      "accuracy": 0.9377880184331797
+    }
+  },
+  "model_file": "frontend\\public\\models\\civicai-image-model.json"
+}

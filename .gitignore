@@ -1,0 +1,66 @@
+# Environment secrets. Keep safe templates in Git.
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Generated frontend build and local build output
+/public/app/
+/dist/
+/build/
+/coverage/
+/frontend/.vite/
+
+# Python environment and caches
+/ml/.venv/
+/ml/data/
+__pycache__/
+*.py[cod]
+
+# Local uploads and generated user data
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+!/storage/uploads/.htaccess
+
+# Face holdout images should not be shared
+/samples/hold_faces/
+
+# Local test cookies and files
+/a.txt
+/t.txt
+/u2.txt
+/fake.jpg
+/owner.jpg
+
+# Local presentation/export artifacts
+/CivicAI_Presentation_and_Full_Guide.docx
+/docx-qa/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Logs and temporary files
+*.log
+/logs/
+/tmp/
+/temp/
+
+# Local database files and compressed dumps.
+# Keep database/*.sql migration scripts tracked.
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+*.sql.gz

@@ -1,0 +1,116 @@
+test_id,exp_category,ai_category,exp_priority,ai_priority,exp_consistency,ai_consistency,confidence,needs_verification,ai_status,ai_reason
+T01,Infrastructure,Infrastructure,High,High,match,match,1.00,0,done,"The photo clearly depicts a large pothole filled with water, which directly matches the resident's description."
+T02,Infrastructure,Infrastructure,Medium,Medium,match,match,1.00,0,done,"The visual evidence directly confirms the presence of multiple potholes on a road as described by the resident."
+T03,Infrastructure,,Medium,,match,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T04,Infrastructure,,Medium,,match,,,0,failed,"gemini http 0 Operation timed out after 40014 milliseconds with 0 bytes received "
+T05,Infrastructure,,High,,match,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T06,Infrastructure,Infrastructure,High,High,match,match,1.00,0,done,"The photo clearly shows a damaged concrete road, which directly matches the resident's description of the road being cracked and broken."
+T07,Infrastructure,Infrastructure,High,Urgent,match,match,1.00,0,done,"The visual evidence of the collapsed road edge and deep cracks directly supports the resident's description of the situation."
+T08,Infrastructure,,High,,match,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T09,Infrastructure,Infrastructure,High,Urgent,match,match,1.00,0,done,"The visual evidence of the damaged road directly corresponds to the resident's description of a cracked and uplifted road."
+T10,"Public Safety",Infrastructure,Urgent,Urgent,match,match,1.00,0,done,"The photo clearly shows the structural failure of a building wall and the resulting debris obstructing the road, which matches the resident's description."
+T11,Sanitation,Sanitation,Medium,Medium,match,match,1.00,0,done,"The photo clearly shows trash piled up in the gutter, which matches the resident's description."
+T12,Sanitation,Sanitation,Medium,Medium,match,match,1.00,0,done,"The photo clearly shows a pile of trash located next to a wall and a truck, which directly matches the resident's description."
+T13,Sanitation,Sanitation,Medium,Medium,match,match,1.00,0,done,"The photo clearly shows a collection of garbage bags and an overflowing bin, which directly matches the resident's description."
+T14,Sanitation,Sanitation,Medium,Medium,match,match,1.00,0,done,"The photo clearly shows garbage dumped in an outdoor area, which aligns with the resident's description."
+T15,Sanitation,Sanitation,Low,Medium,match,match,1.00,0,done,"The photo clearly shows a waste storage facility that is overfilled with trash, which directly matches the resident's description."
+T16,"Public Safety","Public Safety",High,Urgent,match,match,1.00,0,done,"The photo clearly depicts a leaning utility pole with tangled wires hanging over a road where people are actively passing, which matches the resident's description perfectly."
+T17,"Public Safety",,Urgent,,match,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T18,"Public Safety",Infrastructure,Urgent,Urgent,match,match,1.00,0,done,"The image clearly shows a fallen utility pole blocking the road, which matches the resident's description of the situation."
+T19,"Public Safety",,Urgent,,match,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T20,,,,,mismatch,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T21,,Sanitation,,Medium,mismatch,mismatch,1.00,1,done,"The provided image is a meme or edited photo of a dog and does not depict any garbage or sanitation issues related to the report."
+T22,,Infrastructure,,Low,mismatch,mismatch,1.00,1,done,"The provided image is a famous painting and does not show any streetlights or infrastructure issues."
+T23,,Infrastructure,,Low,mismatch,mismatch,1.00,1,done,"The provided image is a meme of a cat and does not show any drainage or flooding issues as described by the resident."
+T24,,Infrastructure,,Low,mismatch,mismatch,1.00,1,done,"The provided image is a meme of a fictional character and does not depict any road damage or infrastructure issues."
+T25,,,,,mismatch,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T26,Infrastructure,Infrastructure,Medium,Medium,unclear/partial,match,1.00,0,done,"The photo clearly shows a pothole on the side of the road, which matches the resident's description, despite the humorous addition of a skeleton prop."
+T27,"Public Safety",,Medium,,unclear/partial,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T28,,,,,mismatch,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T29,,,,,mismatch,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T30,,,,,mismatch,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
+T31,,,,,mismatch,,,0,failed,"gemini http 503  {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+"
